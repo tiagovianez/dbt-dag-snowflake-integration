@@ -5,7 +5,7 @@ This project demonstrates how to build an ETL pipeline by integrating `dbt-core`
 
 ## Architecture
 The pipeline follows these steps:
-1. **Extract**: Data is loaded into Snowflake from various sources.
+1. **Extract**: Data is loaded into Snowflake from SNOWFLAKE_SAMPLE_DATA source.
 2. **Transform**: `dbt-core` runs transformations in Snowflake using SQL models.
 3. **Load**: The transformed data is materialized as tables/views in Snowflake.
 4. **Orchestration**: `astronomer-cosmos` manages dbt execution within an Airflow DAG.
