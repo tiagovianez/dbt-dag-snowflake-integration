@@ -21,8 +21,8 @@ To set up the project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo.git
-   cd your-repo
+   git clone git@github.com:tiagovianez/dbt-dag-snowflake-integration.git
+   cd dbt-dag-snowflake-integration
    ```
 
 2. Create a virtual environment and install dependencies:
@@ -80,10 +80,10 @@ To set up the project locally, follow these steps:
        )
    ```
 
-3. Deploy and start Airflow:
+3. Deploy, init, start and stop Airflow-Cosmos:
    ```bash
-   airflow db init
-   airflow webserver &
+   astro dev init
+   astro dev start
    airflow scheduler
    ```
 
@@ -91,10 +91,6 @@ To set up the project locally, follow these steps:
 - Run dbt manually:
   ```bash
   dbt run
-  ```
-- Trigger the DAG in Airflow:
-  ```bash
-  airflow dags trigger dbt_etl_pipeline
   ```
 
 ## Monitoring and Debugging
